@@ -1,0 +1,327 @@
+@import "./reset.css";
+/* Reset and base styles */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+header,
+section,
+main {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul,
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button,
+input[type='submit'] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+/* Application styles */
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,regular,500,700');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.header {
+    width: 100vw; /* Ensure the header takes the full viewport width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 15px 50px;
+    background: linear-gradient(92.7deg, #391A79 0%, #6830DF 100%), #232323;
+    margin: 0; /* Remove margins to ensure no empty spaces */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.title {
+    margin-bottom: 20px;
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.18;
+    text-align: center;
+    color: #ffffff;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background: #a6f89d;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #391A79;
+    cursor: pointer;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 460px;
+    height: 54px;
+    background: #ffffff;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.input {
+    flex-grow: 1;
+    padding: 15px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+    color: #06030b;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Card */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 360px;
+    background-color: #7447d6;
+    border-radius: 6px;
+    box-shadow: 0px 5px 20px rgba(72, 27, 114, 0.25);
+    margin-bottom: 10px; /* Added margin between cards */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+    z-index: -1;
+    width: calc(100% - 20px);
+    height: 100%;
+    background: #5e39ad;
+    box-shadow: 0px 5px 20px rgba(72, 27, 114, 0.25);
+    border-radius: 6px;
+}
+
+.card-city,
+.card-date {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+.card-city span {
+    display: inline-block;
+    vertical-align: text-top;
+    padding: 3px 5px;
+    background: #fff;
+    border-radius: 6px;
+    color: #391A79;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.card-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-value {
+    font-size: 75px;
+    line-height: 1;
+    color: #fff;
+}
+
+.card-value sup {
+    font-size: 30%;
+}
+
+.card-img {
+    width: 100px;
+    height: 100px;
+}
+
+.card-description {
+    font-size: 20px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.card-time {
+    font-size: 16px;
+    color: #fff;
+}
+
+.error {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/* Page visibility */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .title {
+        font-size: 32px;
+    }
+
+    .nav-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .form {
+        flex-direction: column;
+        height: auto;
+        row-gap: 10px;
+    }
+
+    .input {
+        width: 100%;
+        height: 48px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-city,
+    .card-date {
+        font-size: 24px;
+    }
+
+    .card-value {
+        font-size: 60px;
+    }
+
+    .card-description {
+        font-size: 18px;
+    }
+
+    .card-time {
+        font-size: 14px;
+    }
+}

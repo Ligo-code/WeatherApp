@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Weather App</h1>
+        <nav class="nav">
+            <button id="currentWeatherBtn" class="nav-btn">Current Weather</button>
+            <button id="forecastBtn" class="nav-btn">Forecast</button>
+        </nav>
+        <form id="form" class="form">
+            <input id="inputCity" class="input" type="text" placeholder="Search for city">
+        </form>
+    </header>
+    <div id="content">
+        <div id="currentWeatherPage" class="page active">
+            <div id="cardContainerCurrent"></div>
+        </div>
+        <div id="forecastPage" class="page">
+            <div id="cardContainerForecast"></div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
